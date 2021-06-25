@@ -1,0 +1,13 @@
+input, textarea {
+    &.form-control {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        background-color: transparent!important;
+    
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}

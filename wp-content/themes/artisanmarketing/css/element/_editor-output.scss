@@ -1,0 +1,81 @@
+.textwidget,
+.editor {
+    font-size: 16px;
+  
+    $headingStart: 1 !default;
+    $headingEnd: 6 !default;
+    $headingIncrement: 1 !default;
+  
+    p {
+      width: 100%;
+    }
+  
+    @while $headingStart <= $headingEnd {
+      h#{$headingStart} {
+        font-size: 18px;
+        font-family: $font;
+        font-weight: 700;
+      }
+      $headingStart: $headingStart + $headingIncrement;
+    }
+  
+    &:after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+  
+    blockquote {
+      background-color: $softGrey;
+      border-left: 7px solid #ddd;
+      padding: 15px 15px 5px 20px;
+      font-style: italic;
+    }
+  
+    figure,
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+  
+      @media (max-width: 575px) {
+        width: 100%;
+        height: auto;
+        float: none!important;
+        margin-left: 0!important;
+        margin-right: 0!important;
+      }
+    }
+  
+    .alignleft {
+      float: left;
+      margin-top: 15px;
+      margin-right: 15px;
+      margin-bottom: 15px;
+    }
+  
+    .alignright {
+      float: right;
+      margin-top: 15px;
+      margin-left: 15px;
+      margin-bottom: 15px;
+    }
+  
+    .aligncenter {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .wp-caption-text {
+      margin-top: 10px;
+      padding-left: 10px;
+      border-left: 7px solid #ddd;
+      font-size: 14px;
+      font-style: italic;
+      color: #666;
+    }
+  
+    ul, ol {
+      padding-left: 30px;
+    }
+  }

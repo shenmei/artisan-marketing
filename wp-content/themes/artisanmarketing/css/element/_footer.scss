@@ -1,0 +1,42 @@
+.footer {
+    background-color: $softGrey;
+    padding: 70px 0;
+
+    &__menu {
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-top: -8px;
+
+        .nav-link {
+            padding: 8px 15px;
+            color: $black;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+
+    &__socmed {
+        margin-left: -5px;
+
+        .nav-item {
+            padding: 5px;
+        }
+
+        .nav-link {
+            width: 44px;
+            line-height: 44px;
+            background-color: $blue;
+            text-align: center;
+            color: #fff;
+            padding: 0;
+            border-radius: 50%;
+
+            &:hover, &:focus {
+                color: #fff;
+                background-color: $lightBlue;
+            }
+        }
+    }
+}

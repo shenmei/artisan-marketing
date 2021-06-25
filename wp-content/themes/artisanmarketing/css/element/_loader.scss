@@ -1,0 +1,40 @@
+.loader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $softGrey;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include imageRatio(120,171,true,logo);
+
+    &__logo-container {
+        &:after {
+            position: absolute;
+            content: ' ';
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: linear-gradient(-45deg, $blue, $lightBlue, $tosca, $lightBlue, $blue);
+            background-size: 400% 400%;
+            animation: gradient 5s ease infinite;
+        }
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

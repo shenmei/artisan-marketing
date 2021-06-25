@@ -1,0 +1,83 @@
+.title {
+    color: $black;
+    font-weight: 700;
+    line-height: 1.2;
+
+    &--large {
+        font-size: 60px;
+    }
+
+    &--medium {
+        font-size: 48px;
+    }
+
+    &--small {
+        font-size: 36px;
+    }
+}
+
+.highlight {
+    &--tosca {
+        span {
+            color: $tosca;
+        }
+    }
+
+    &--blue {
+        span {
+            color: $blue;
+        }
+    }
+
+    &--lightblue {
+        span {
+            color: $lightBlue;
+        }
+    }
+
+    &--underline {
+        span {
+            text-decoration: underline;
+        }
+    }
+}
+
+.text-outline {
+    -webkit-text-stroke: 1px $darkGrey;
+    font-weight: 700;
+    color: transparent;
+    text-transform: uppercase;
+    line-height: 1.2;
+
+    &--large {
+        font-size: 108px;
+    }
+
+    &--medium {
+        font-size: 96px;
+    }
+}
+
+.titlesub {
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+
+    &--grey {
+        color: $darkGrey;
+    }
+
+    &--blue {
+        color: $blue;
+    }
+
+    &--lightblue {
+        color: $lightBlue;
+    }
+
+    &--white {
+        color: #fff;
+    }
+}

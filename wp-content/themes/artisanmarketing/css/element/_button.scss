@@ -1,0 +1,43 @@
+@each $name, $color, $transparent 
+in (pulseBlue, rgba($blue, 0.4), rgba($blue, 0)), 
+(pulseLightblue, rgba($lightBlue, 0.4), rgba($lightBlue, 0)) {
+    @include pulse-keyframe ( #{$name}, #{$color}, #{$transparent} );
+}
+
+.btn {
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    &__block {
+        @each $name, $bg, $keyframe 
+        in (--blue, $blue, pulseBlue), 
+            (--lightblue, $lightBlue, pulseLightblue) {
+            &#{$name} {
+                color: #fff;
+                background-color: #{$bg};
+                
+                &:hover,
+                &:focus {
+                    color: #fff;
+                    background-color: darken($bg, 5%);
+                    animation: #{$keyframe} 2s infinite;
+                }
+            }
+        }
+    }
+
+    &__border {
+        color: $blue;
+        border: 1px solid $blue;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: $blue;
+            animation: pulseBlue 2s infinite;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.project-thumb {
+    @include imageRatio(4,3,false,img);
+
+    position: relative;
+    overflow: hidden;
+
+    &__text-holder:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        content: " ";
+        z-index: 1;
+        background-color: rgba($blue, 0.7);
+        @include transform(translateY(-100%));
+        @include transition(all 0.4s ease-in-out);
+    }
+
+    &__text {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        right: 15px;
+        text-align: center;
+        z-index: 2;
+        opacity: 0;
+        @include transform(translateY(100%));
+        @include transition(all 0.4s ease-in-out);
+    }
+
+    &__cat-holder,
+    &__title {
+        @include elypsis(16, 1, 1.8);
+    }
+
+    &__cat {
+        color: #fff;
+        & + & {
+            &:before {
+                content: ", ";
+            }
+        }
+    }
+
+    &:hover {
+        .project-thumb__text {
+            @include transform(translateY(-50%));
+            opacity: 1;
+        }
+        .project-thumb__text-holder:before {
+            @include transform(translateY(0));
+            opacity: 1;
+        }
+    }
+}
