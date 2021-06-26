@@ -28,7 +28,18 @@ body {
     z-index: 999;
 }
 
+.below-navbar {
+    padding-top: 90px;
+}
 
 a, button {
     @include transition(all 0.3s ease-in-out);
+}
+
+.error {
+    @include imageRatio(600,250,true,img,contain);
+}
+
+.none {
+    @include imageRatio(600,280,true,img,contain);
 }

@@ -12,6 +12,9 @@ const entryPoints = {
     // you can have more than 1 entry point
     'layout': jsPath + '/layout.js',
     'home': jsPath + '/home.js',
+    'page': cssPath + '/page.scss',
+    'archive': cssPath + '/archive.scss',
+    'project': cssPath + '/project.scss',
 };
 
 module.exports = {

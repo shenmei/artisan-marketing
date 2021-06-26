@@ -2,10 +2,11 @@
 <footer class="footer" data-scroll-section>
     <div class="container">
         <div class="row">
-            <div class="col-sm-4 col-12 footer__col" data-scroll data-scroll-delay="1" data-scroll-position="bottom">
+            
+            <div class="col-lg-4 col-md-8 col-12 pb-5 pb-lg-0 footer__col" data-scroll>
                 <?php dynamic_sidebar( 'footer-desc' ); ?>
             </div>
-            <div class="col-sm-4 col-12 footer__col" data-scroll data-scroll-speed="2" data-scroll-position="bottom">
+            <div class="col-lg-4 col-md-6 col-12 footer__col pb-md-0 pb-5" data-scroll>
                 <h3 class="titlesub titlesub--grey mb-4">Quick Links</h3>
                 <div class="row">
                     <?php
@@ -13,7 +14,7 @@
                         wp_nav_menu(array(
                             'theme_location'       => 'footer_menu',
                             'container'            => 'div',
-                            'container_class'      => 'col-md-5',
+                            'container_class'      => 'col-5',
                             'menu_class'           => 'footer__menu nav flex-column',
                             'depth'                => 1,
                             'fallback_cb'          => 'WP_Bootstrap_Navwalker::fallback',
@@ -23,7 +24,7 @@
                         wp_nav_menu(array(
                             'theme_location'       => 'services_menu',
                             'container'            => 'div',
-                            'container_class'      => 'col-md-7',
+                            'container_class'      => 'col-7',
                             'menu_class'           => 'footer__menu nav flex-column',
                             'depth'                => 1,
                             'fallback_cb'          => 'WP_Bootstrap_Navwalker::fallback',
@@ -43,7 +44,7 @@
                     ?>
                 </div>
             </div>
-            <div class="col-sm-4 col-12 footer__col" data-scroll data-scroll-speed="3" data-scroll-position="bottom">
+            <div class="col-lg-4 col-md-6 col-12 footer__col pt-3 pt-md-0" data-scroll>
                 <h3 class="titlesub titlesub--grey mb-4">Join Newsletter</h3>
                 <?php echo do_shortcode('[contact-form-7 id="94" title="Newsletter Form"]') ?>
             </div>

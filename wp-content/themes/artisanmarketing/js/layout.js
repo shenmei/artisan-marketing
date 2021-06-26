@@ -21,6 +21,6 @@ window.addEventListener("load", function () {
     *   loader
     */
     var loader = gsap.timeline();
-    loader.to('.loader__logo-container', { duration: 0.7, scale: 0, ease: "expo.out" })
-        .to('.loader', { duration: 1.2, yPercent: -100, ease: "expo.inOut" });
+    loader.to('.loader__logo-container', { duration: 0.5, scale: 0, ease: "expo.out" })
+        .to('.loader', { duration: 1, yPercent: -100, ease: "expo.inOut" });
 });

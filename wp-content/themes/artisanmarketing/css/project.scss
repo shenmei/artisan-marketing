@@ -1,0 +1,7 @@
+@import "config";
+@import "element/project-thumb";
+@import "element/pagination";
+
+.project-thumb {
+    @include imageRatio(4,3,false,img);
+}

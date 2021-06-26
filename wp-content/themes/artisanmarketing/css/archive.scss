@@ -1,0 +1,6 @@
+@import "config";
+@import "element/pagination";
+
+.post {
+    @include imageRatio(4,3,false,img);
+}

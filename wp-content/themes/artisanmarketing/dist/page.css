@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap);
+.page__img-container {
+  position: relative;
+  width: 100%; }
+  .page__img-container:before {
+    content: "";
+    display: block;
+    padding-top: 50%; }
+
+.page__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.list-category__item {
+  padding: 3px; }
+
+.list-category__link {
+  color: #1958b0;
+  background-color: #f7f7f7;
+  border-radius: 30px; }
+  .list-category__link:hover, .list-category__link:focus {
+    background-color: #eaeaea; }
+

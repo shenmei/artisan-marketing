@@ -17,40 +17,41 @@
     <span class="sr-only">Loading</span>
 </div>
 
+<header>
+    <nav class="navbar navbar-expand-lg bsnav bsnav-sticky">
+        <?php the_custom_logo() ?>
+
+        <?php
+
+            wp_nav_menu(array(
+                'theme_location'       => 'social_media',
+                'container'            => 'div',
+                'container_class'      => '',
+                'menu_class'           => 'navbar-nav navbar-socmed',
+                'depth'                => 1,
+                'fallback_cb'          => 'WP_Bootstrap_Navwalker::fallback',
+                'walker'               => new WP_Bootstrap_Navwalker()
+            ));
+
+        ?>
+
+        <button class="navbar-toggler toggler-spring ml-auto"><span class="navbar-toggler-icon"></span></button>
+
+        <?php
+
+            wp_nav_menu(array(
+                'theme_location'       => 'main_menu',
+                'container'            => 'div',
+                'container_class'      => 'collapse navbar-collapse justify-content-md-end nav__main',
+                'menu_class'           => 'navbar-nav navbar-mobile',
+                'depth'                => 2,
+                'fallback_cb'          => 'WP_Bootstrap_Navwalker::fallback',
+                'walker'               => new WP_Bootstrap_Navwalker()
+            ));
+
+        ?>
+    </nav>
+</header>
+
 <div data-scroll-container>
-    <header>
-        <nav class="navbar navbar-expand-lg bsnav">
-            <?php the_custom_logo() ?>
-
-            <?php
-
-                wp_nav_menu(array(
-                    'theme_location'       => 'social_media',
-                    'container'            => 'div',
-                    'container_class'      => '',
-                    'menu_class'           => 'navbar-nav ml-3',
-                    'depth'                => 1,
-                    'fallback_cb'          => 'WP_Bootstrap_Navwalker::fallback',
-                    'walker'               => new WP_Bootstrap_Navwalker()
-                ));
-
-            ?>
-
-            <button class="navbar-toggler toggler-spring"><span class="navbar-toggler-icon"></span></button>
-
-            <?php
-
-                wp_nav_menu(array(
-                    'theme_location'       => 'main_menu',
-                    'container'            => 'div',
-                    'container_class'      => 'collapse navbar-collapse justify-content-md-end nav__main',
-                    'menu_class'           => 'navbar-nav navbar-mobile',
-                    'depth'                => 2,
-                    'fallback_cb'          => 'WP_Bootstrap_Navwalker::fallback',
-                    'walker'               => new WP_Bootstrap_Navwalker()
-                ));
-
-            ?>
-        </nav>
-    </header>
-    <main>
+    <main class="below-navbar">

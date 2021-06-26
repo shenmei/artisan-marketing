@@ -7,6 +7,10 @@
     max-width: 175px;
     padding: unset;
 
+    @media (max-width:575.98px) {
+        max-width: 130px;
+    }
+
     &:before {
         content: "";
         display: block;
@@ -26,6 +30,11 @@
 .bsnav {
     padding-left: 30px;
     padding-right: 30px;
+
+    @media (max-width:575.98px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
     .navbar-nav {
         .nav-item {
@@ -63,6 +72,14 @@
             }
         }
     }
+
+    &-mobile-overlay {
+        background-color: rgba(#fff, .8);
+    }
+}
+
+.bsnav-sticky {
+    position: fixed!important;
 }
 
 .nav-item {
@@ -75,7 +92,7 @@
             color: $blue!important;
             border: 2px solid $blue;
             border-radius: 40px;
-            padding: 8px 15px!important;
+            padding: 7px 25px!important;
             text-transform: uppercase;
 
             &:hover,
@@ -83,6 +100,78 @@
                 color: #fff!important;
                 background-color: $blue;
             }
+        }
+    }
+}
+
+.navbar-socmed {
+    flex-direction: row;
+}
+
+.navbar-toggler .navbar-toggler-icon, .navbar-toggler .navbar-toggler-icon::after, .navbar-toggler .navbar-toggler-icon::before {
+    background-color: unset;
+    background: rgb(42,245,198);
+    background: -moz-linear-gradient(90deg, rgba(42,245,198,1) 0%, rgba(7,174,234,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(42,245,198,1) 0%, rgba(7,174,234,1) 100%);
+    background: linear-gradient(90deg, rgba(42,245,198,1) 0%, rgba(7,174,234,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2af5c6",endColorstr="#07aeea",GradientType=1);
+}
+
+.navbar-toggler.toggler-spring.active .navbar-toggler-icon {
+    background: transparent;
+}
+
+.navbar-toggler {
+    padding: 0;
+    height: 44px;
+
+    &.toggler-spring .navbar-toggler-icon {
+        top: 7px;
+    }
+}
+
+.bsnav-mobile {
+    .navbar-nav { 
+        .nav-item {
+            &.active {
+                .nav-link {
+                    color: $blue;
+                }
+            }
+
+            &--action {
+                margin-left: 0;
+                padding-top: 15px;
+
+                .nav-link {
+                    display: block;
+                    text-align: center;
+                }
+            }
+
+            .nav-link {
+                display: block;
+                padding: 8px 0;
+                font-weight: 600;
+                width: 100%;
+
+                &:hover,
+                &:focus {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
+
+.bsnav-mobile .navbar-nav .nav-item.menu-item-has-children>.navbar-nav {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: $softGrey;
+
+    .nav-item {
+        .nav-link {
+            padding-left: 15px;
         }
     }
 }

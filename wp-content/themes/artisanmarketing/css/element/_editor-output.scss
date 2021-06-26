@@ -37,14 +37,6 @@
       max-width: 100%;
       height: auto;
       display: block;
-  
-      @media (max-width: 575px) {
-        width: 100%;
-        height: auto;
-        float: none!important;
-        margin-left: 0!important;
-        margin-right: 0!important;
-      }
     }
   
     .alignleft {
@@ -78,4 +70,18 @@
     ul, ol {
       padding-left: 30px;
     }
+  }
+
+  @media (max-width: 575px) {
+      .editor {
+        figure,
+        img {
+            width: 100%;
+            height: auto;
+            float: none!important;
+            margin-left: 0!important;
+            margin-right: 0!important;
+        }
+      }
+    
   }

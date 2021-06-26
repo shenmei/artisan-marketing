@@ -1,0 +1,22 @@
+@import "config";
+
+.page {
+    @include imageRatio(2,1,false,img);
+}
+
+.list-category {
+    &__item {
+        padding: 3px;
+    }
+
+    &__link {
+        color: $blue;
+        background-color: $softGrey;
+        border-radius: 30px;
+
+        &:hover,
+        &:focus {
+            background-color: darken($softGrey, 5%);
+        }
+    }
+}

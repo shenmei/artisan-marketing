@@ -73,13 +73,13 @@
 @mixin pulse-keyframe ($name, $color, $transparent) {
     @keyframes #{$name} {
         0% {
-            @include box-shadow(0 0 0 0 #{$color});
+            box-shadow: 0 0 0 0 #{$color};
         }
         70% {
-            @include box-shadow(0 0 0 0 #{$transparent});
+            box-shadow: 0 0 0 20px #{$transparent};
         }
         100% {
-            @include box-shadow(0 0 0 0 #{$transparent});
+            box-shadow: 0 0 0 0 #{$transparent};
         }
     }
 }

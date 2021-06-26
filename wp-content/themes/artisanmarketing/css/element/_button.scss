@@ -1,13 +1,9 @@
-@each $name, $color, $transparent 
-in (pulseBlue, rgba($blue, 0.4), rgba($blue, 0)), 
-(pulseLightblue, rgba($lightBlue, 0.4), rgba($lightBlue, 0)) {
-    @include pulse-keyframe ( #{$name}, #{$color}, #{$transparent} );
-}
+@include pulse-keyframe ( pulseBlue, rgba($blue, 0.4), rgba($blue, 0) );
+@include pulse-keyframe ( pulseLightblue, rgba($lightBlue, 0.4), rgba($lightBlue, 0) );
 
 .btn {
     font-weight: 600;
     padding: 15px 30px;
-    border-radius: 50px;
     text-transform: uppercase;
     letter-spacing: 2px;
 
@@ -18,26 +14,58 @@ in (pulseBlue, rgba($blue, 0.4), rgba($blue, 0)),
             &#{$name} {
                 color: #fff;
                 background-color: #{$bg};
+                border-radius: 50px;
                 
                 &:hover,
                 &:focus {
                     color: #fff;
                     background-color: darken($bg, 5%);
-                    animation: #{$keyframe} 2s infinite;
+                    animation: #{$keyframe} 1.5s infinite;
                 }
             }
         }
     }
 
-    &__border {
+    &__link {
         color: $blue;
-        border: 1px solid $blue;
+        padding-left: 0;
+        padding-right: 25px;
+        position: relative;
+        @include transition( all 0.4s ease-in-out);
+
+        &-icon, &-arrow {
+            position: absolute;
+            top: 50%;
+            @include transition( all 0.4s ease-in-out);
+        }
+
+        &-icon {
+            left: 0;
+            opacity: 0;
+            @include transform(translate(-100%, -50%));
+        }
+
+        &-arrow {
+            right: 0;
+            @include transform(translate(0, -50%));
+        }
 
         &:hover,
         &:focus {
-            color: #fff;
-            background-color: $blue;
-            animation: pulseBlue 2s infinite;
+            padding-left: 25px;
+            padding-right: 0;
+            color: $blue;
+            box-shadow: none!important;
+
+            .btn__link-icon {
+                opacity: 1;
+                @include transform(translate(0, -50%));
+            }
+
+            .btn__link-arrow {
+                opacity: 0;
+                @include transform(translate(100%, -50%));
+            }
         }
     }
 }

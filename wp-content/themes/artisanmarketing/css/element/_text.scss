@@ -14,6 +14,42 @@
     &--small {
         font-size: 36px;
     }
+
+    &--xs {
+        font-size: 24px;
+    }
+
+    @media (max-width: 1199.98px) {
+        &--large {
+            font-size: 48px;
+        }
+        &--medium {
+            font-size: 42px;
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        &--large,
+        &--medium {
+            font-size: 36px;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        &--large,
+        &--medium, 
+        &--small {
+            font-size: 32px;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        &--large,
+        &--medium, 
+        &--small {
+            font-size: 28px;
+        }
+    }
 }
 
 .highlight {
@@ -55,6 +91,29 @@
 
     &--medium {
         font-size: 96px;
+    }
+
+    @media (max-width: 1199.98px) {
+        &--large {
+            font-size: 96px;
+        }
+        &--medium {
+            font-size: 84px;
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        &--large,
+        &--medium {
+            font-size: 72px;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        &--large,
+        &--medium {
+            font-size: 60px;
+        }
     }
 }
 
